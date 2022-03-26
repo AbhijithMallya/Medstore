@@ -1,0 +1,62 @@
+/*                              ASSIGNMENT 2
+
+
+TOPIC = FUNDAMENTAL DATATYPE
+DESCRIPTON = CALCULATING SIMPLE INTEREST
+DATE OF SUBMISSION = 31/07/2018
+STUDENT = ABHIJITH MALLYA  XI C  4462  */
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+clrscr();
+cout<<"\t\t\t\t  \"  \aBANK DATA\a  \""
+<<"\n\n\n\n\nNAME\t\tPRINCIPAL\t\tTIME\t\tRATE\tSIMPLE INTEREST";
+cout<<"\t\t\t (RUPEES)\t\t(years)\t\t(%)\t(RUPEES)";
+gotoxy(1,10);
+cout<<"SUPERMAN";
+gotoxy(17,10);
+float p;
+cin>>p;
+gotoxy(41,10);
+float t;
+cin>>t;
+gotoxy(58,10);
+float r;
+cin>>r;
+gotoxy(68,10);
+float i;
+i=p*r*t/100;
+cout<<i;
+cout<<"\n\n\n\nBATMAN";
+gotoxy(17,14);
+float p2;
+cin>>p2;
+gotoxy(41,14);
+float t2;
+cin>>t2;
+gotoxy(58,14);
+float r2;
+cin>>r2;
+gotoxy(68,14);
+float i2;
+i2=p2*r2*t2/100;
+cout<<i2;
+cout<<"\n\n\n\nIRONMAN";
+gotoxy(17,18);
+float p3;
+cin>>p3;
+gotoxy(41,18);
+float t3;
+cin>>t3;
+gotoxy(58,18);
+float r3;
+cin>>r3;
+gotoxy(68,18);
+float i3;
+i3=p3*r3*t3/100;
+cout<<i3;
+cout<<"\n\n\n\n\n\n\t\t\t\t\"THANK  YOU\"";
+getch();
+}
+

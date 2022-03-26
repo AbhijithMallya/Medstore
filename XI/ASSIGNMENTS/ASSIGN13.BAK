@@ -1,0 +1,60 @@
+/*                             ASSIGNMENT 13
+TOPIC : Do...while loop
+Description : Menu driven program for complex numbers
+D.O.S : 27-11-2018
+*/
+#include<iostream.h>
+#include<conio.h>
+#include<stdlib.h>
+#include<dos.h>
+void main()
+{
+do{
+clrscr();
+float real,flag=1,img,a,b,x,y;
+int choice ;
+	cout<<"\n\t\t\tComplex Number Calculator\n\t\t\t-------------------------"
+	<<"\n\n\n\t\tChoose the Following Operation :\n\t\t------------------------------\n"
+	<<"\n\t1 - SUM\n\t2 - DIFFERNCE\n\t3 - PRODUCT\n\t4 - DIVISION\n\t5 - EXIT"
+	<<"\n\n\tMY CHOICE : ";
+	cin>>choice;
+if(choice==1||choice==2||choice==3||choice==4)
+{
+    cout<<"\n\t\tEnter the coefficientts of the COMPLEX NUMBER of the form \n\t\t\n\n\t\t a + i(b) "
+	<<"\n\t\t\tNUMBER 1\n\t\t\t--------"
+	<<"\n\t\tCoefficient of a : ";cin>>a;
+    cout<<"\n\t\tCoefficient of b : ";cin>>b;
+    cout<<"\n\n\t\t\tNUMBER 2\n\t\t\t--------"
+	<<"\n\n\t\tCoefficient of a : ";cin>>x;
+    cout<<"\n\t\tCoefficient of b : ";cin>>y;}
+switch(choice)
+{
+case 1 :real=a+x;
+	img=b+y;
+	break;
+case 2 :real=a-x;
+	img=b-y;
+	break;
+case 3 :real=a*x-b*y;
+	img=a*y+b*x;
+	break;
+case 4 : if(x==0&&y==0)
+	 {cout<<"\n\n\n\n\t\t\tDivide by zero error";flag=0;
+	 break; }
+	 real=((a*x)+(b*y))/((x*x)+(y*y));
+	 img=((a*y)-(b*x))/((x*x)+(y*y));break;
+case 5 :exit(0);
+default :cout<<"\n\n\t\tInvalid option ";
+	 getch();
+
+}
+if((flag=1)&&(choice==1||choice==2||choice==3||choice==4))
+{cout<<"\n\t\tLoading the answer .    .    .   .   .   .  \n\n ";
+for(int i=1;i<=79;i++)
+{cout<<"*";delay(10);}
+
+cout<<"\n\n\n\tRESULT : "<<real<<" + "<<img<<" i";}
+getch();
+
+}while(1);
+}

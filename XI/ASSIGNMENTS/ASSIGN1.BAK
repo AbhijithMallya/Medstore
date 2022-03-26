@@ -1,0 +1,84 @@
+/*                               ASSIGNMENT 1
+
+Topic - Input and Output Function
+Description - Cover page of magazine
+Date Of Submission - 
+#include<iostream.h> \\ASSIGNMENT 1   \\MAGAZINE DESIGN OF D I G I T
+#include<conio.h>                     \\DESIGNER -- ABHIJITH MALLYA
+void main()
+{
+clrscr();
+cout<<"\n\n\n\n\n\n\n\n\n\t\t\t   \" \aTHE NEXT DECADE\a \"";
+cout<<"\n\n\t\t\t\t\t\t-SCIENCE";
+cout<<"\t\t\t\t\t\t\t\t\t\t-TECH";
+cout<<"\n\n------------------------------------------------------------------------------";
+cout<<"\n\n\t\t\t   *-2018  TO  2019-*";
+cout<<"\n\n\n\n\t\t*3 D PRINT HUMAN ORGAN";
+cout<<"\n\n\t\t*FIRST INDIAN MANNED SPACE PROGRAMME";
+cout<<"\n\n\t\t*GOOGLE SPEEDS UP INTERNET";
+cout<<"\n\n\n\n\t\tVISIT \: http\:\\\\www.DIG\_IT.XI C";
+cout<<"\n\t\t\t\t\t\t-*SIGNED BY";
+cout<<"\t\t\t\t\t\t\t\t\t\a\a ABHIJITH MALLYA"; getch();
+}
+                                  OUTPUT
+
+
+
+
+
+
+
+
+                           " THE NEXT DECADE "
+
+                                                -SCIENCE
+                                                        -TECH
+
+------------------------------------------------------------------------------
+
+                           *-2018  TO  2019-*
+
+
+
+                *3 D PRINT HUMAN ORGAN
+
+                *FIRST INDIAN MANNED SPACE PROGRAMME
+
+                *GOOGLE SPEEDS UP INTERNET
+
+
+
+                VISIT : http:\\www.DIG_IT.XI C
+                                                -*SIGNED BY
+                                                 ABHIJITH MALLYA
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+
+
+
+
+
+
+
+
+
+
+
+

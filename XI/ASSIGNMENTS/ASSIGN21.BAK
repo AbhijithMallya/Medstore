@@ -1,0 +1,32 @@
+/*				ASSIGNMENT 21
+TOPIC : String Functions
+DESCRIPTION : Finding a Substring from main string
+D.O.S : 00 - 00 - 0000
+*/
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+#include<string.h>
+
+void main()
+{ clrscr();
+char M_string[50],temp[20],S_string[20];	int k,i,j,count;
+cout<<"\n\t\t\tSearching substring\n\t\t\t-------------------"
+     <<"\n\n\t\tEnter a String :: ";gets(M_string);
+cout<<"\n\n\t\tEnter a Sub-String :: ";gets(S_string);
+
+	for(i=0;M_string[i]!='\0';i++)
+	     {	for(j=0,k=i;j<strlen(S_string);j++,k++)
+		     temp[j]=M_string[k];
+		     temp[j]='\0';
+		     if(strcmpi(temp,S_string)==0)
+		     {cout<<"\n\t\tFound at "<<i+1<<" position";count++;}
+
+	     }
+if(count==0)
+cout<<"\n\n\t\t"<<S_string<<" is not found..";
+getch();
+}
+
+
+

@@ -1,0 +1,42 @@
+/*				ASSIGNMENT 19
+
+TOPIC : arrays and using functions of ctupe.h
+DESCRIPTION : Frequency table of characters
+D.O.S : 28 - 01 - 2019
+*/
+
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+
+void main()
+{      	clrscr();
+	int i,j,upcase=0,lwcase=0,vowel=0,digit=0,special=0,n;
+	char A[50][50],k;cout<<"\n\n\t\t\tFREQUENCY  TABLE\n\t\t\t------------------";
+	cout<<"\n\n\n\t\t\tEnter number of strings : ";cin>>n;
+	for ( i=0 ; i<n ; i++ )
+	    { cout<<"\n\n\t\t\tEnter String["<< i+1 <<"] : "; gets(A[i]); }
+
+	for ( i=0 ; i<n ; i++ )
+	{
+		for ( j=0 ; A[i][j]!='\0' ; j++ )
+		  {     k=A[i][j];
+			if(k>=65&&k<=90)
+			upcase++;
+			if(k>=97&&k<=122)
+			lwcase++;
+			if(k>=48&&k<=57)
+			digit++;
+			if(k=='A'||k=='a'||k=='e'||k=='E'||k=='i'||k=='I'||k=='o'||k=='O'||k=='U'||k=='u')
+			vowel++;
+			if(k<=47||(k>=58&&k<=64)||(k>=91&&k<=96)||k>=123)
+			special++;
+		  }   //end for j
+	} // end for i
+/*DISPLAY--DISPLAY---*/	 cout<<"\n\n\t\tUPPER CASE - "<<upcase
+			    <<"\n\t\tLOWER CASE - "<<lwcase
+			    <<"\n\t\tDIGITS - "<<digit
+			    <<"\n\t\tVOWEL  - "<<vowel
+			    <<"\n\t\tSPECIAL - "<<special;
+getch();
+}

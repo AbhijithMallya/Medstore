@@ -1,0 +1,80 @@
+/*                              ASSIGNMENT 8
+TOPIC : Data Structers
+DESCRIPTION : Implementing Merge Sort for DAD combination
+D.O.S :  13 - 6 - 2019
+*/
+
+#include<iostream.h>
+#include<conio.h>
+#include<dos.h>
+#include<process.h>
+
+class sort
+{
+int A[20],B[20],C[40];
+int   m  ,  n  ;  // m->A[20] && n->B[20]  sizes
+public :
+void inp_arr1()
+{ clrscr(); cout<<"\n\tEnter the number of elements in array 1 : ";cin>>m;
+  cout<<"\n\tNote :: The elements should be in descending order .";
+  cout<<"\n\n\t\tARRAY 1\n\t\t-------\n";
+  for(int i=0;i<m;i++)
+  {cout<<"\tEnter element ["<<i+1<<"] :: ";cin>>A[i];
+   if(i>=1&&A[i]>A[i-1])
+   {cout<<"\n\tElements should be in descending Order  .";getch();exit(0);}
+  }
+}
+
+void inp_arr2()
+{ clrscr(); cout<<"\n\tEnter the number of elements in array 2 : ";cin>>n;
+  cout<<"\n\tNote :: The elements should be in Ascending order .";
+  cout<<"\n\n\t\tARRAY 2\n\t\t-------\n";
+  for(int i=0;i<n;i++)
+  {cout<<"\tEnter element ["<<i+1<<"] :: ";cin>>B[i];
+   if(i>=1&&B[i]<B[i-1])
+   {cout<<"\n\tElements should be in Ascending Order  .";getch();exit(0);}
+  }
+}
+
+
+void mergesort()
+{
+int i=0,j=n-1,k=0;
+	while(i<m&&j>=0)
+	{
+	 if(A[i]>=B[j])
+	 {C[k++]=A[i++]; }
+	 else
+	  {C[k++]=B[j--]; }
+	}
+ while(i<m)
+ {C[k++]=A[i++];}
+ while(j>=0)
+ {C[k++]=B[j--];}
+
+cout<<"\n\tOUTPUT\n\t";
+for(i=0;i<k;i++)
+{if(C[i+1]==C[i])
+ cout<<C[++i]<<" ";
+ else cout<<C[i]<<" ";
+}
+getch();
+
+
+}// end the function
+
+
+}; // end of class
+
+
+
+void main()
+{
+sort obj;
+clrscr();
+obj.inp_arr1();
+obj.inp_arr2();
+obj.mergesort();
+
+
+}

@@ -1,0 +1,32 @@
+/*				ASSIGNMENT 17
+TOPIC : Shifting elements of array
+DESCRIPTION :  Rotaing a string
+D.O.S : 15 - 01 -2019          */
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+void main()
+{
+clrscr();int i,j,temp; char string[50];
+
+cout<<"\n\n\t\t\tROTATING STRING\n\t\t\t---------------\n\n\tEnter a string(max character 49) : ";
+
+gets(string);
+
+for(int len=0;string[len]!='\0';len++); // length of a string
+     cout<<"\n"<<string<<" \n"  ;
+
+	for(int k=0;k<len;k++)
+	{
+	 j =len-1 ;
+	 temp = string[j] ;
+	  for ( j = len-1; j>0; j--)
+		 string[j] = string[j-1];
+
+	  string[0] = temp ;
+	  cout<<"\n"<<string<<"\n";
+	}
+
+
+getch();
+}

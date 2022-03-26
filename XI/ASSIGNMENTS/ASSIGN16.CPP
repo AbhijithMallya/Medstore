@@ -1,0 +1,45 @@
+/*                            ASSIGNMENT 16
+
+TOPIC : Bubble Sorting
+Description : Deleting elements with duplication
+D.O.S : 13- 01 - 2019
+*/
+#include<iostream.h>
+#include<conio.h>
+#include<stdlib.h>
+void main()
+{
+clrscr();
+int A[50],count, position,i,item,n;
+cout<<"\n\t\t\tDeleting elements of an array\n\t\t\t"
+    <<"-----------------------------";
+cout<<"\n\n\t\tEnter number elements to be entered : ";cin>>n;
+	for(i=0;i<n;i++)
+	{cout<<"A["<<i+1<<"] = ";cin>>A[i];}
+
+cout<<"\nThe Elements of Arrays are : \n";
+
+	for( i=0;i<n;i++)
+	cout<<"\nA["<<i+1<<"] = "<<A[i];
+
+cout<<"\n\n\nEnter the element to be deleted : ";cin>>item;
+      for(int k=0;k<n;k++)
+     {
+	   for( i=0;i<n;i++)
+	   {	if(A[i]==item)
+	       { for(int j=i;j<n;j++)
+		 A[j]=A[j+1];
+		 n--;
+		 i--;
+		}// if
+	   }  //  for i
+     }  // for k
+getch();
+cout<<"\nThe Elements of Arrays are : \n";
+
+for(i=0;i<n;i++)
+cout<<"\nA["<<i+1<<"] = "<<A[i];
+
+getch();
+}
+

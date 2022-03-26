@@ -1,0 +1,94 @@
+/*                                ASSIGNMENT  8
+
+
+Topic : Nested if,Switch case, dangling if else
+Description :Checking the validity of a given date
+Date of Submission : 14/09/2018       */
+#include<iostream.h>
+#include<conio.h>
+#include<dos.h>
+void main()
+{
+clrscr();
+int d,m,y;
+cout<<"\n\n\n\t\t\tCHECK THE VALIDITY OF DATE \n\t\t\t--------------------------";
+cout<<"\n\n\t\tENTER DATE : ";cin>>d;
+cout<<"\n\n\t\tENTER MONTH : ";cin>>m;
+cout<<"\n\n\t\tENTER YEAR : ";cin>>y;
+cout<<"\n\n\n\n\t\t\tRESULT : ";
+int l=1;
+if( (y%100==0&&y%400!=0) || (y%100!=0&&y%4!=0))
+    l=0 ;
+
+if(d<=31&&d>=1)
+    if(m<=12&&m>=1)
+	if(y>=0)
+	{ //  main body starts
+	  if(l==1)
+	  {//l==1
+	   if( ((m==1||m==3||m==5||m==7||m==8||m==10||m==12)&&(d<=31)) || ( (m==4||m==6||m==9||m==11)&&(d<=30) ) || (m==2&&d<=29) )
+	      {	     switch(d)
+/*IF start*/         { case 1:
+		       case 31:
+		       case 21:cout<<d<<" st";break;
+		       case 2:
+		       case 22:cout<<d<<" nd";break;
+		       case 3:
+		       case 23:cout<<d<<" rd";break;
+		       default : cout<<d<<" th";}
+		     switch (m)
+		     { case 1:cout<<"  JANUARY   "<<y;break;
+		       case 2:cout<<"  FEBRUARY   "<<y;break;
+		       case 3:cout<<"  MARCH   "<<y;break;
+		       case 4:cout<<"  APRIL   "<<y;break;
+		       case 5:cout<<"  MAY   "<<y;break;
+		       case 6:cout<<"  JUNE   "<<y;break;
+		       case 7:cout<<"  JULY   "<<y;break;
+		       case 8:cout<<"  AUGUST   "<<y;break;
+		       case 9:cout<<"  SEPTEMBER   "<<y;break;
+		       case 10:cout<<" OCTOBER   "<<y;break;
+		       case 11:cout<<" NOVEMBER   "<<y;break;
+		       case 12:cout<<"  DECEMBER   "<<y;break;}
+/*IF close*/  }
+	   else
+	   cout<<"Given month cannot have "<<d<<" days !";
+	  }//l=1
+	  if(l==0)
+	  {//l==0
+	   if( ((m==1||m==3||m==5||m==7||m==8||m==10||m==12)&&(d<=31)) || ( (m==4||m==6||m==9||m==11)&&(d<=30) ) || (m==2&&d<=28) )
+
+/*IF start*/   {      switch(d)
+		     { case 1:
+		       case 31 :
+		       case 21:cout<<d<<" st";break;
+		       case 2:
+		       case 22:cout<<d<<" nd";break;
+		       case 3:
+		       case 23:cout<<d<<" rd";break;
+		       default : cout<<d<<" th";}
+		     switch (m)
+		     { case 1:cout<<"  JANUARY   "<<y;break;
+		       case 2:cout<<"  FEBRUARY   "<<y;break;
+		       case 3:cout<<"  MARCH   "<<y;break;
+		       case 4:cout<<"  APRIL   "<<y;break;
+		       case 5:cout<<"  MAY   "<<y;break;
+		       case 6:cout<<"  JUNE   "<<y;break;
+		       case 7:cout<<"  JULY   "<<y;break;
+		       case 8:cout<<"  AUGUST   "<<y;break;
+		       case 9:cout<<"  SEPTEMBER   "<<y;break;
+		       case 10:cout<<" OCTOBER   "<<y;break;
+		       case 11:cout<<" NOVEMBER   "<<y;break;
+		       case 12:cout<<"  DECEMBER   "<<y;break;}
+/*IF close*/  }
+	   else
+	   cout<<"Given month cannot have "<<d<<" days !";
+	  }//l==0
+	}// main body close
+	else
+	cout<<"Invalid Year";
+    else
+    cout<<"Invalid Month";
+else
+cout<<"Invalid Date";
+getch();
+}
